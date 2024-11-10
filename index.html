@@ -1,0 +1,53 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Contar caracteres</title>
+    <style>
+        body {
+            background-color: black;
+            padding: 5rem;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            background-color: black;
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        textarea, p {
+            color: white;
+            font-size: 20px;
+            padding: 1%;
+            background: black;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <form role="form">
+        <h1>Contando...</h1>
+        <p id="qtde">Cantidad de caracteres:</p>
+        <div class="form-group">
+            <textarea id="textarea" rows="10" cols="80"
+                placeholder="Escribí acá"></textarea>
+        </div>
+    </form>
+
+    <script>
+     document.getElementById('textarea').onkeyup = function () {
+     document.getElementById('qtde').innerHTML = "Cantidade de caracteres: " + "<strong>" + this.value.length + "</strong>";
+    };
+    </script>
+</body>
+
+</html>
